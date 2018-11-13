@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Яна](https://up.htmlacademy.ru/htmlcss/23/user/824219).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Перейро] (https://up.htmlacademy.ru/htmlcss/23/user/336863).
 
 ---
 
