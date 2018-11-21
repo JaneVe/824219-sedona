@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="utf-8">
-	<title>Поиск жилья в Седоне</title>
-</head>
-<body>
- <header class="main-header">
- 	<nav class="main-navigation">
-    <!-- что с формативрование кода? Вложенность должна быть видна. я про тег a и имг -->
- 		<a class="main-header-logo">
- 		<img src="img/index-logo.svg" width="100" height="100" alt="Логотип сайта бронирования отелей «Седона»">
- 	    </a>
- 		<ul class="site-navigation">
- 			<li><a href="info.html">Информация</a></li>
- 			<li><a href="media.html">Фото и видео</a></li>
- 			<li><a href="map.html">Карта штата</a></li>
- 			<li><a href="hotel.html">Гостиницы</a></li>
- 		</ul>
- 	</nav>
- </header>
- <main class="container">
- 	<h1 class="visually-hidden">Аренда жилья в Седоне</h1>
-   
- 	<section class="photos">
-    <!-- неудачное название класс + внутри должен лежать img с 3 текстами --> 
-  </section>
-   
-  <!-- Нужна ноовая секция features, а то текст получается в пространстве. тег b - лишний и в этой секции должно быть и "рассморим 5 причин" -->
- 	<p><b>Седона — небольшой городок в Аризоне, заслуживающий большего!</b></p>
-   
+    <head>
+	    <meta charset="utf-8">
+	    <title>HTML Academy: Седона</title>
+    </head>
+    <body>
+        <header class="main-header">
+ 	        <nav class="main-navigation">
+ 		        <a class="main-header-logo">
+ 		            <img src="img/index-logo.svg" width="100" height="100" alt="Логотип сайта бронирования отелей «Седона»">
+ 	            </a>
+ 		        <ul class="site-navigation">
+ 			        <li><a href="info.html">Информация</a></li>
+ 			        <li><a href="media.html">Фото и видео</a></li>
+ 			        <li><a href="map.html">Карта штата</a></li>
+ 			        <li><a href="hotel.html">Гостиницы</a></li>
+ 		        </ul>
+ 	        </nav>
+        </header>
+        <main class="container">
+ 	        <h1 class="visually-hidden">Аренда жилья в Седоне</h1>
+            <section class="welcome-title">
+            	<img src="img/welcome.png" alt="Welcome to gorgeous sedona" width="500" height="350">
+            </section>
+            <section class="features">
+                <p class="small-town">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+                <p class="reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     <!-- красная зона -->
-    <!-- тут уже секция не нужна, т.к. она выше -->
- 	<section class="features">
- 		<h2 class="visually-hidden">Преимущества</h2>
- 		<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-    
- 		<ul class="features-list">
- 			<li class="feature-item">
+                <h2 class="visually-hidden">Преимущества</h2>
+ 		        <ul class="features-list">
+ 			        <li class="feature-item">
         <!-- преимущество делим на 2 части. 1 часть - под описание, второе под фото -->
         <!-- div.feature-info -->
  				<h3>Настоящий городок</h3>
@@ -72,31 +65,24 @@
  	</section>
  	<!-- конец красной зоны -->
    
-  <!-- Новая секция -->
- 	<p class="interest" >Заинтересовались?</p>
-   
-   <!-- article не не нужен, h2 - это не щаголовок, а кнопка. И порядок элементов не правильный-->
- 	<article>
- 		<h2>Поиск гостиницы в Седоне</h2>
- 		<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
- 		<!-- форма -->
- 	</article>
-   
-   <!-- конец новой секкции -->
- </main>
-  
- <footer class="main-footer">
- 	<p class="">#VISITSEDONA</p>
- 	<ul class="footer-social">
- 		<li><a class="social-button" href="#">Твиттер</a></li>
- 		<li><a class="social-button" href="#">Фейсбук</a></li>
- 		<li><a class="social-button" href="#">Ютуб</a></li>
- 	</ul>
- 	<p class="footer-copyright">
-    <!-- вместо b - сдлеай span -->
-    <b>Website by</b>
-        <a class="button-academy" href="https://htmlacademy.ru">HTML Academy</a>
-      </p>
- </footer>
-</body>
+            <section class="search-form">
+ 	            <p class="interest">Заинтересовались?</p>
+ 	            <p class="alleged-date">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+ 	            <a class="button-search" href="#">Поиск гостиницы в Седоне</a>
+                <!-- форма -->
+ 	        </section>
+        </main>
+        <footer class="main-footer">
+ 	        <p class="">#VISITSEDONA</p>
+ 	        <ul class="footer-social">
+ 		        <li><a class="social-button" href="#">Твиттер</a></li>
+ 		        <li><a class="social-button" href="#">Фейсбук</a></li>
+ 		        <li><a class="social-button" href="#">Ютуб</a></li>
+ 	        </ul>
+ 	        <p class="footer-copyright">
+                <span>Website by</span>
+                <a class="button-academy" href="https://htmlacademy.ru">HTML Academy</a>
+            </p>
+        </footer>
+    </body>
 </html>
