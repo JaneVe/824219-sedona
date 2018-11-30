@@ -24,26 +24,25 @@
     		<img src="img/welcome.png" alt="Welcome to gorgeous sedona" width="459" height="353">
     	</section>
     	<section class="features">
+        <!-- я бы этих 2ух фразах закончил бы сеции features, а точнее назвал бы section.slogan -->
     		<p class="slogan">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
     		<p class="text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 <!-- красная зона -->
-            <h2 class="visually-hidden">Преимущества</h2>
-		        <ul class="features-list">
-			        <li class="feature-item">
-			        	<div class="feature-info">
-			        		<h3>Настоящий городок</h3>
-			        		<span class="number">— №1 —</span>
-			        		<p class="text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-			        	</div>
-			        	<figure></figure>
-			        </li>
-				<li class="feature-item">
-					<figure></figure>
-					<div class="feature-info">
-						<h3>Там есть Мост дьявола</h3>
-						<span class="number">— №2 —</span>
-						<p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-						</div>
+        <!-- тут бы закрыл -->  
+        <!-- а тут бы сделал уже section.features -->
+        <--! что с форматированием тут? -->
+          <!-- и , кстати, h2.visually-hidden пишется в самом начале секции -->
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="features-list">
+        <li class="feature-item">
+          <div class="feature-info">
+            <h3>Настоящий городок</h3>
+            <span class="number">— №1 —</span>
+            <p class="text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
+          <figure></figure>
+        </li>
+				<li>
 						<ul>
 							<li class="feature-item">
 								<h3>Небольшая площадь</h3>
@@ -61,47 +60,33 @@
 								<p class="text">Большинство едет в гранд каньон и толпится там</p>
 							</li>
 						</ul>
-					</li>
-				</ul>
-				<ul>
-					<li class="subclause">
-						<h3>Жильё</h3>
-						<p class="text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-					</li>
-					<li>
-						<h3>Еда</h3>
-						<p class="text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-					</li>
-					<li>
-						<h3>Сувениры</h3>
-						<p class="text">Не только китайского, но и местного производства!</p>
-					</li>
-				</ul>
-    <!-- преимущество делим на 2 части. 1 часть - под описание, второе под фото -->
-    <!-- div.feature-info -->
-    <!-- отдельно №, отдельно текст, т.е. спан не долже нбыть вложен в p -->
-    <!-- /div.feature-info> -->
-    <!-- figure под картирнку. и оставь его пустым /figure -->
-			
-  
-  <!-- а где еда жилье и тд -- ? они , кстати, тоже отедльным списком внутри li -->
-  
-			
-  
-  <!-- Вот эти 3 должны быть в отдельном списке, который вложен в li.feaure-item
-			<li class="feature-item">
-				<h3>Небольшая площадь</h3>
-				<p><span>— №3 —</span> Все достопримечательности находятся очень близко</p>
-			</li>
-			<li class="feature-item">
-				<h3>Красивая дорога</h3>
-				<p><span>— №4 —</span> Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-			</li>
-			<li class="feature-item">
-				<h3>Мало туристов</h3>
-				<p><span>— №5 —</span> Большинство едет в гранд каньон и толпится там</p>
-			</li>-->
-  <!-- закрываем отдельный список -->
+				</li>
+		    <li class="feature-item">
+          <!-- почему этот элемент 2ой по счету? он же 3ий. я про мост дьявола -->
+					<figure></figure>
+					<div class="feature-info">
+						<h3>Там есть Мост дьявола</h3>
+						<span class="number">— №2 —</span>
+						<p class="text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					</div>
+        </li> 
+        <li>  
+          <ul>
+            <li class="subclause">
+              <h3>Жильё</h3>
+              <p class="text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <li>
+              <h3>Еда</h3>
+              <p class="text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li>
+              <h3>Сувениры</h3>
+              <p class="text">Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </li>  
+      </ul>    
 		</section>
 	<!-- конец красной зоны -->
         <section class="search-form">
