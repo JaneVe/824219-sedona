@@ -28,7 +28,6 @@
 			<p class="text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 		</section>
 		<section class="features">
-			<!--стилизация-->
 			<h2 class="visually-hidden">Преимущества</h2>
 			<ul class="features-list">
 				<li class="feature-item">
@@ -84,11 +83,29 @@
 				</li>
 			</ul>
 		</section>
-		<section class="search-form">
+		<section class="search">
 			<p class="search-subtitle">Заинтересовались?</p>
 			<p class="text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
 			<a class="button-search">Поиск гостиницы в Седоне</a>
-			<!-- форма -->
+			<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+				<p class="search-item">
+					<label for="date-check-in">Дата заезда:</label>
+					<input id="date-check-in" type="text" name="date-check-in" placeholder="24 апреля 2017">
+				</p>
+				<p class="search-item">
+					<label for="date-check-out">Дата выезда:</label>
+					<input id="date-check-out" Дата выезда:type="text" name="date-check-out" placeholder="4 июля 2017">
+				</p>
+				<p class="search-item">
+					Взрослые:
+					<input type="number" name="adults" min="1" max="10" step="1">
+				</p>
+				<p class="search-item">
+					Дети:
+					<input type="number" name="children" min="0" max="10" step="1">
+				</p>
+				<button class="button" type="submit">Найти</button>
+			</form>
 		</section>
 	</main>
 	<footer class="main-footer">
