@@ -94,22 +94,19 @@
 				</p>
 				<p class="search-item">
 					<label for="date-check-out">Дата выезда:</label>
-          <!-- ниже в инпуте "Дата выезда" лищняя -->
-					<input id="date-check-out" Дата выезда:type="text" name="date-check-out" placeholder="4 июля 2017">
+					<input id="date-check-out" type="text" name="date-check-out" placeholder="4 июля 2017">
 				</p>
 				<p class="search-item">
-          <!-- взрослые - label -->
-					Взрослые:
-          <!-- Тут нужна кнопка минус -->
-					<input type="number" name="adults" min="1" max="10" step="1">
-          <!-- Тут нужна кнопка плюс -->
+					<label for="adults">Взрослые:</label>
+					<button type="button" class="button-minus">Минус</button>
+					<input id="adults" type="number" name="adults" min="1" max="10" step="1">
+					<button type="button" class="button-plus">Плюс</button>	
 				</p>
 				<p class="search-item">
-           <!-- дети - label -->
-					Дети:
-          <!-- Тут нужна кнопка минус -->
-					<input type="number" name="children" min="0" max="10" step="1">
-          <!-- Тут нужна кнопка плюс -->
+					<label for="children">Дети:</label>
+					<button type="button" class="button-minus">Минус</button>
+					<input id="children" type="number" name="children" min="0" max="10" step="1">
+					<button type="button" class="button-plus">Плюс</button>
 				</p>
 				<button class="button" type="submit">Найти</button>
 			</form>
@@ -118,13 +115,13 @@
 	<footer class="main-footer">
 		<p class="hashtag">#VISITSEDONA</p>
 		<ul class="footer-social">
-			<li><a class="social-button" href="#">Твиттер</a></li>
-			<li><a class="social-button" href="#">Фейсбук</a></li>
-			<li><a class="social-button" href="#">Ютуб</a></li>
+			<li><a class="social-button" href="#" aria-label="HTML Academy в Твиттере">Твиттер</a></li>
+			<li><a class="social-button" href="#" aria-label="HTML Academy в Фейсбуке">Фейсбук</a></li>
+			<li><a class="social-button" href="#" aria-label="HTML Academy в Ютубе">Ютуб</a></li>
 		</ul>
 		<p class="footer-copyright">
 			<span>Website by</span>
-			<a class="button-academy" href="https://htmlacademy.ru">HTML Academy</a>
+			<a class="button-academy" href="https://htmlacademy.ru" aria-label="Логотип сайта HTML Academy">HTML Academy</a>
 		</p>
 	</footer>
 </body>
