@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  }
+
+a {
+  text-decoration: none;
+}
+.main-navigation {
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+
+	background-color: #ffffff;
+}
+.site-navigation {
+	list-style: none;
+}
+.site-navigation a {
+	color: #000000;
+}
+.site-navigation a:hover {
+	color: #81b3d2;
+}
+.site-navigation a:focus {
+	color: rgba(0, 0, 0, 0.302);
+}  
+.welcome-title {
+	background-image: url("img/backgroundphoto.jpg");
+	background-position: top center;
+    background-repeat: no-repeat;
+}
+.slogan-text{
+	font-size:21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+
+	background-color: #ffffff;
+}
+.subslogan {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: normal;
+	color: #333333;
+	text-align: center;
+
+	background-color: #ffffff;
+}
+/*Красная зона
+.features-list {
+	list-style: none;
+}
+.feature-info h3 {
+	color: #ffffff;
+	text-align: center;
+
+	background-color: #81b3d2;
+}
+.subclause h3 {
+	color: #000000;
+	text-align: center;
+	background-color: #ffffff;
+}
+Конец красной зоны*/
+/*
+.sublist-one,
+.sublist-two,
+.footer-social {
+	list-style: none;
+}*/
+
+
+
+.footer-copyright a:hover {
+	color: #81b3d2;
+}
+
+.footer-copyright a:focus {
+	color: rgba(0, 0, 0, 0.302);
+}
+
+h3 {
+	font-size: 21px;
+	line-height: 21px;
+	font-weight: bold;
+
+}
+
+
+.search-subtitle {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+
+	background-color: #ffffff;
+}
+.search .text {
+	font-size: 14px;
+	line-height: 24px;
+	color: #333333;
+	text-align: center;
+
+	background-color: #ffffff;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  …
+}
+
