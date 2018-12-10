@@ -17,6 +17,7 @@ a {
 	text-decoration: none;
 }
 
+/* этот класс лишний, она по другому будет центрироваться, убери так же его в html */
 .center-img {
 	display: block;
 	margin: 0 auto;
