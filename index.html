@@ -11,7 +11,7 @@
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo">
-				<img src="img/svg-sedona/logo-sedona.svg" width="140" height="72" alt="Логотип сайта бронирования отелей «Седона»">
+				<img src="img/svg-sedona/logo-sedona.svg" width="140" height="72" alt="Логотип сайта бронирования отелей «Седона»" class="center-img">
 			</a>
 			<ul class="site-navigation">
 				<li><a href="info.html">Информация</a></li>
@@ -22,14 +22,16 @@
 		</nav>
 	</header>
 	<main class="container">
-		<h1 class="visually-hidden">Аренда жилья в Седоне</h1>
-		<section class="welcome-title">
-			<img src="img/welcome.png" alt="Welcome to gorgeous sedona" width="459" height="353">
-		</section>
-		<section class="slogan">
-			<p class="slogan-text">Седона — небольшой городок в Аризоне,</br> заслуживающий большего!</p>
-			<p class="subslogan">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-		</section>
+		<div class="backgroundphoto">
+			<h1 class="visually-hidden">Аренда жилья в Седоне</h1>
+			<section class="welcome-title">
+				<img src="img/welcome.png" alt="Welcome to gorgeous sedona" width="459" height="353" class="center-img">
+			</section>
+			<section class="slogan">
+				<p class="slogan-text">Седона — небольшой городок в Аризоне,</br> заслуживающий большего!</p>
+				<p class="subslogan">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+			</section>
+		</div>
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества</h2>
 			<ul class="features-list">
@@ -93,11 +95,11 @@
 			<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 				<p class="search-item">
 					<label for="date-check-in">Дата заезда:</label>
-					<input id="date-check-in" type="text" name="date-check-in" placeholder="24 апреля 2017">
+					<input id="date-check-in" type="text" name="date-check-in" placeholder="24 апреля 2017" class="date">
 				</p>
 				<p class="search-item">
 					<label for="date-check-out">Дата выезда:</label>
-					<input id="date-check-out" type="text" name="date-check-out" placeholder="4 июля 2017">
+					<input id="date-check-out" type="text" name="date-check-out" placeholder="4 июля 2017" class="date">
 				</p>
 				<p class="search-item">
 					<label for="adults">Взрослые:</label>
@@ -114,6 +116,13 @@
 				<button class="button" type="submit">Найти</button>
 			</form>
 		</section>
+		<!--
+		<section class="map">
+			<p>
+        		<img src="img/map.jpg" width="1718" height="748" alt="Седона на карте">
+      		</p>
+      	</section>
+      -->
 	</main>
 	<footer class="main-footer">
 		<p class="hashtag">#VISITSEDONA</p>
@@ -123,7 +132,7 @@
 			<li><a class="social-button" href="#" aria-label="HTML Academy в Ютубе">Ютуб</a></li>
 		</ul>
 		<p class="footer-copyright">
-			<span>Website by</span>
+			<span class="website">Website by</span>
 			<a class="button-academy" href="https://htmlacademy.ru" aria-label="Логотип сайта HTML Academy">HTML Academy</a>
 		</p>
 	</footer>
