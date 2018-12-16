@@ -42,6 +42,44 @@ figure {
 	flex-wrap: wrap;
 	flex-direction: row;
 	margin: 0;
+	padding: 15px 71px;
+	list-style: none;
+}
+
+.site-navigation li {
+	outline: 1px solid blue;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 128px;
+}
+
+.site-navigation li:nth-child(3) {
+	margin-left: auto;
+}
+
+.site-navigation li:nth-child(n+3) {
+	text-align: right;
+}
+
+.site-navigation li:nth-child(2n) {
+	margin-left: 115px;
+}
+
+.site-navigation a {
+	
+	color: #000000;
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+/*.site-navigation {
+	outline: 1px solid green;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0;
 	padding: 0 73px;
 	list-style: none;
 }
@@ -67,7 +105,7 @@ figure {
 	background-color: #ffffff;
 	display: block;
 	padding: 15px 0;
-}
+}*/
 
 .site-navigation a:hover {
 	color: #81b3d2;
@@ -84,11 +122,22 @@ figure {
 }
 /*Велком тайтл*/
 .welcome-title {
-	outline: 1px solid black;
+	/*outline: 1px solid black;*/
 	height: 510px;
 	background-image: url("../img/backgroundphoto.jpg");
 	background-position: 0 -56px;
     background-repeat: no-repeat;
+}
+.welcome-title::before {
+	content: "";
+	position: absolute;
+	top: 509px;
+    left: 0;
+    width: 1200px;
+    height: 59px;
+	background-image: url("../img/svg-sedona/intro-mask.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .welcome-title img {
@@ -103,7 +152,7 @@ figure {
 
 .slogan-text {
 	display: block;
-	padding-top: 60px;
+	padding-top: 59px;
 	padding-bottom: 30px;
 	margin: 0;
 	font-size: 21px;
@@ -142,8 +191,8 @@ figure {
 }
 
 .feature-info {
-	width: 303px;
-	padding: 40px 48px;
+	width: 400px;
+	
 	color: #ffffff;
 	text-align: center;
 
@@ -152,7 +201,11 @@ figure {
 
 .feature-info h3 {
 	margin: 0;
-	padding: 0 60px;
+	margin-bottom: 23px;
+	margin-top: 50px;
+	padding-left: 120px;
+	padding-right: 120px;
+	/*padding: 0 60px;*/
 	color: #ffffff;
 	text-align: center;
 	font-size: 21px;
@@ -160,6 +213,12 @@ figure {
 	background-color: #81b3d2;
 }
 
+.feature-info p {
+	margin: 0;
+	margin-right: 47px;
+	margin-left: 47px;
+	margin-top: 21px;
+}
 .city {
 	background-image: url("../img/city.jpg");
 	background-repeat: no-repeat;
@@ -207,6 +266,10 @@ figure {
 	text-align: center;
 }
 
+.subclause {
+	outline: 1px solid grey;
+}
+
 .subclause,
 .subclause-two {
 	list-style: none;
@@ -218,6 +281,50 @@ figure {
 	font-size: 21px;
 	line-height: 21px;
 	background-color: #ffffff;
+	margin: 0;
+	margin-bottom: 23px;
+	padding-top: 164px;
+	position: relative;
+}
+
+.subclause p {
+	margin: 0;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+.house::after {
+	content: "";
+	position: absolute;
+	top: 60px;
+    left: 162px;
+    width: 75px;
+    height: 72px;
+	background-image: url("../img/svg-sedona/icon-1.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.food::after {
+	content: "";
+	position: absolute;
+	top: 60px;
+    left: 162px;
+    width: 74px;
+    height: 70px;
+	background-image: url("../img/svg-sedona/icon-3.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.souvenir::after {
+	content: "";
+	position: absolute;
+	top: 56px;
+    left: 168px;
+    width: 64px;
+    height: 76px;
+	background-image: url("../img/svg-sedona/icon-2.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .subclause-two h3 {
@@ -226,8 +333,19 @@ figure {
 	font-size: 21px;
 	line-height: 21px;
 	background-color: #eeeeee;
+	margin: 0;
+	margin-bottom: 23px;
+	margin-top: 49px;
+	padding-right: 138px;
+	padding-left: 138px;
 }
 
+.subclause-two p {
+	margin: 0;
+	margin-right: 69px;
+	margin-left: 69px;
+	margin-top: 22px;
+}
 /*Поиск.Форма*/
 
 .search {
@@ -542,19 +660,16 @@ figure {
 }
 
 .visually-hidden:not(:focus):not(:active) {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .main-header {
@@ -562,6 +677,7 @@ figure {
 }
 
 .map {
+	width: 1200px;
 	height: 475px;
 }
 
