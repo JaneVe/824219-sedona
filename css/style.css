@@ -16,11 +16,15 @@ a {
 	text-decoration: none;
 }
 
+/* нельзя сбрасывать глобально стили. Исключение - ссылки. так что эти стили напиши там, где нужно */
 figure {
 	margin: 0;
 	padding: 0;
 }
 
+/* используй box-sizing:border-box */
+
+/*поменяй название класса :) */
 .background-white {
 	position: relative;
     width: 1200px;
@@ -40,6 +44,7 @@ figure {
 	outline: 1px solid green;
 	display: flex;
 	flex-wrap: wrap;
+  /* по умолчанию и так row */
 	flex-direction: row;
 	margin: 0;
 	padding: 15px 71px;
@@ -52,8 +57,10 @@ figure {
 	padding: 0;
 	list-style: none;
 	width: 128px;
+  /* я бы таки дал li width:20%; сейчас не очень с маргнами этими. тоесть вообще убрать маргины. Только третему автоматический влево оставить */
 }
 
+/* через чур усложнила */
 .site-navigation li:nth-child(3) {
 	margin-left: auto;
 }
@@ -147,10 +154,14 @@ figure {
 }
 
 .slogan {
-	margin: 0;
+  /* зачем ? */
+	margin: 0
+  /* я всегда в блоках верхний и нижний отступ даю именно блоку родителю, а не его детям. сейчас у тебя верхний паддинг у слоган-текст,
+    нижний - у сабслоган. дай их общему блоку, а расстояниие между этими блоками напиши в маргин нижний слоган-текст */
 }
 
 .slogan-text {
+  /* Зачем блок? он изначально блочный */
 	display: block;
 	padding-top: 59px;
 	padding-bottom: 30px;
@@ -197,6 +208,7 @@ figure {
 	text-align: center;
 
 	background-color: #81b3d2;
+  /* про паддинги и маргины так же история, что и выше */
 }
 
 .feature-info h3 {
@@ -219,6 +231,9 @@ figure {
 	margin-left: 47px;
 	margin-top: 21px;
 }
+
+/* city i devilbridge дублируются свойства, подумай объеденить в общий класс, а вотдельный остаивть только фоновое изображение типо так
+.photo-feature .photo-city */
 .city {
 	background-image: url("../img/city.jpg");
 	background-repeat: no-repeat;
@@ -247,7 +262,7 @@ figure {
 	vertical-align: middle;
 	text-align: center;
 	text-transform: uppercase;
-
+  /* мин высота так себе вараинт. Используй нижний и верхний падинг для регулрировки выоста */
 } 
 
 .sublist-two {
@@ -268,6 +283,7 @@ figure {
 
 .subclause {
 	outline: 1px solid grey;
+  
 }
 
 .subclause,
@@ -388,6 +404,7 @@ figure {
 	position: absolute;
 	left: 312px;
 	top: 235px;
+  /* left 50%, transform:translateX - 50% */
 }
 
 .button-search {
@@ -462,6 +479,10 @@ figure {
 	background-position: 97% 50%;
 }
 
+/* в форме пока всё плохо. Если ты не знаешь как ее сделать - созвонимся. Календарик, согласно ТЗ - отдельный интерактивный элемемнт (ссылка) */
+
+/* что произошло с футером? */
+
 /*Гостиницы*/
 
 .catalog-list {
@@ -478,6 +499,7 @@ figure {
 .catalog-hotel {
 	display: flex;
 	margin: 31px 73px;
+  /* Отступы - внутренние */
 }
 
 .catalog-hotel figure {
