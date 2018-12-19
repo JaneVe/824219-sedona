@@ -1,19 +1,19 @@
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 
-	font-family: "PT Sans", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
-	color: #333333;
-	text-transform: uppercase;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+  text-transform: uppercase;
 
-	background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 img {
@@ -26,99 +26,72 @@ img {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
-
-/* нельзя сбрасывать глобально стили. Исключение - ссылки. так что эти стили напиши там, где нужно */
-figure {
-	margin: 0;
-	padding: 0;
-}
-
-/* используй box-sizing:border-box */
-
-/*поменяй название класса :) */
-.background-white {
-	position: relative;
-    width: 1200px;
-    min-height: 933px;
-    margin-right: auto;
-    margin-left: auto;
-
-	background-color: #ffffff;
-	box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
 }
 /*Хедер*/
 .main-header-logo {
-	position: absolute;
-	left: 530px;
+  position: absolute;
+  left: 530px;
 }
 
 .site-navigation {
-	display: flex;
-	flex-wrap: wrap;
-
-
-  /* по умолчанию и так row */
-	flex-direction: row;
-
-	margin: 0;
-	padding: 15px 71px;
-	list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px 71px;
+  list-style: none;
 }
 
 .site-navigation li {
-	box-sizing: border-box;
+  box-sizing: border-box;
   width: 20%;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
-	width: 128px;
-  /* я бы таки дал li width:20%; сейчас не очень с маргнами этими. тоесть вообще убрать маргины. Только третему автоматический влево оставить */
-
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* через чур усложнила */
 .site-navigation li:nth-child(3) {
-	margin-left: auto;
-	padding-right: 31px;
+  margin-left: auto;
+  padding-right: 31px;
 }
 
 .site-navigation li:nth-child(n+3) {
-	text-align: right;
+  text-align: right;
 }
 
 .site-navigation li:nth-child(2) {
-	padding-left: 28px;
+  padding-left: 28px;
 }
 
 .site-navigation a {
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
   color: #000000;
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .site-navigation a:hover {
-	color: #81b3d2;
+  color: #81b3d2;
 }
 
 .site-navigation a:active {
-	color: rgba(0, 0, 0, 0.302);
+  color: rgba(0, 0, 0, 0.302);
 }
 
 .site-navigation-current a,
 .site-navigation-current a:hover,
 .site-navigation-current a:active {
-	color: #766357;
+  color: #766357;
 }
 
 /*Велком тайтл*/
 
 .welcome-title {
-	height: 510px;
-	background-image: url("../img/backgroundphoto.jpg");
-	background-position: 0 -56px;
+  height: 510px;
+  background-image: url("../img/backgroundphoto.jpg");
+  background-position: 0 -56px;
   background-repeat: no-repeat;
 }
 
@@ -129,245 +102,199 @@ figure {
 }
 
 .welcome-title::before {
-	content: "";
-	position: absolute;
-	top: 509px;
+  content: "";
+  position: absolute;
+  top: 509px;
   left: 0;
   width: 1200px;
   height: 59px;
-	background-image: url("../img/svg-sedona/intro-mask.svg");
+  background-image: url("../img/svg-sedona/intro-mask.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .slogan p {
-	margin: 0;
+  margin: 0;
 }
 
 .slogan {
-
-	padding-top: 60px;
-	padding-bottom: 51px;
+  padding-top: 60px;
+  padding-bottom: 51px;
 }
 
 .slogan .slogan-text {
-	max-width: 440px;
-	margin-bottom: 30px;
-	margin-left: 380px;
+  max-width: 440px;
+  margin-bottom: 30px;
+  margin-left: 380px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
 
-  /* зачем ? */
-	margin: 0
-  /* я всегда в блоках верхний и нижний отступ даю именно блоку родителю, а не его детям. сейчас у тебя верхний паддинг у слоган-текст,
-    нижний - у сабслоган. дай их общему блоку, а расстояниие между этими блоками напиши в маргин нижний слоган-текст */
-}
-
-.slogan-text {
-  /* Зачем блок? он изначально блочный */
-	display: block;
-	padding-top: 59px;
-	padding-bottom: 30px;
-	margin: 0;
-
-	font-size: 21px;
-	line-height: 26px;
-	font-weight: bold;
-	color: #000000;
-	text-align: center;
-
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .subslogan {
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
-	color: #333333;
-	text-align: center;
-	background-color: #ffffff;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: #333333;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 /*Преимущества*/
 .features {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .features-list {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .feature-item {
-	display: flex;
+  display: flex;
 }
 
 .feature-info {
   box-sizing: border-box;
-	width: 400px;
-	padding-top: 48px;
-	padding-bottom: 54px;
-	text-align: center;
+  width: 400px;
+  padding-top: 48px;
+  padding-bottom: 54px;
+  text-align: center;
   color: #ffffff;
-	background-color: #81b3d2;
-  /* про паддинги и маргины так же история, что и выше */
+  background-color: #81b3d2;
 }
 
 .feature-info h3 {
-	max-width: 151px;
+  max-width: 151px;
   margin: 0;
-	margin-bottom: 25px;
-	padding-left: 124px;
-	padding-right: 118px;
-	text-align: center;
-	font-size: 21px;
-	line-height: 21px;
+  margin-bottom: 25px;
+  padding-left: 124px;
+  padding-right: 118px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
   color: #ffffff;
-	background-color: #81b3d2;
+  background-color: #81b3d2;
 }
 
 .feature-info p {
-	margin: 0;
-	margin-top: 22px;
-	margin-right: 47px;
-	margin-left: 47px;
+  margin: 0;
+  margin-top: 22px;
+  margin-right: 47px;
+  margin-left: 47px;
 }
-
 
 .feature-item figure {
   width: 800px;
   height: 256px;
-	margin: 0;
-	padding: 0;
-	background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
 }
 
-
-/* city i devilbridge дублируются свойства, подумай объеденить в общий класс, а вотдельный остаивть только фоновое изображение типо так
-.photo-feature .photo-city */
-
 .city {
-	background-image: url("../img/city.jpg");
+  background-image: url("../img/city.jpg");
 }
 
 .devilbridge {
-	background-image: url("../img/devilbridge.jpg");
+  background-image: url("../img/devilbridge.jpg");
 }
 
 .sublist-one {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
 }
 
 .sublist-one li {
-	width: 400px;
-	padding-bottom: 82px;
-	vertical-align: middle;
-	text-align: center;
-	text-transform: uppercase;
-
-
-  /* мин высота так себе вараинт. Используй нижний и верхний падинг для регулрировки выоста */
-}
-
-.sublist-two {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
-	background-color: #eeeeee;
-}
-
-.sublist-two li {
-	width: 400px;
-	min-height: 257px;
-	text-align: center;
-}
-
-.subclause {
-	outline: 1px solid grey;
-
-
+  width: 400px;
+  padding-bottom: 82px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .subclause,
 .subclause-two {
-	list-style: none;
+  list-style: none;
 }
 
 .subclause h3 {
   position: relative;
-	margin: 0;
-	margin-bottom: 23px;
-	padding-top: 164px;
-	text-align: center;
-	font-size: 21px;
-	line-height: 21px;
+  margin: 0;
+  margin-bottom: 23px;
+  padding-top: 164px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
   color: #000000;
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .subclause p {
-	margin: 0;
-	margin-right: 50px;
-	margin-left: 50px;
+  margin: 0;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 .house::after {
-	content: "";
-	position: absolute;
-	top: 60px;
+  content: "";
+  position: absolute;
+  top: 60px;
   left: 162px;
   width: 75px;
   height: 72px;
-	background-image: url("../img/svg-sedona/icon-1.svg");
+  background-image: url("../img/svg-sedona/icon-1.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .food::after {
-	content: "";
-	position: absolute;
-	top: 60px;
+  content: "";
+  position: absolute;
+  top: 60px;
   left: 162px;
   width: 74px;
   height: 70px;
-	background-image: url("../img/svg-sedona/icon-3.svg");
+  background-image: url("../img/svg-sedona/icon-3.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .souvenir::after {
-	content: "";
-	position: absolute;
-	top: 56px;
+  content: "";
+  position: absolute;
+  top: 56px;
   left: 168px;
   width: 64px;
   height: 76px;
-	background-image: url("../img/svg-sedona/icon-2.svg");
+  background-image: url("../img/svg-sedona/icon-2.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
 .sublist-two {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0;
-	list-style: none;
-	background-color: #eeeeee;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  background-color: #eeeeee;
 }
 
 .sublist-two li {
-	width: 400px;
-	padding-top: 48px;
-	padding-bottom: 58px;
-	text-align: center;
+  width: 400px;
+  padding-top: 48px;
+  padding-bottom: 58px;
+  text-align: center;
 }
 
 .subclause-two h3 {
@@ -375,116 +302,104 @@ figure {
   margin-bottom: 23px;
   padding-right: 138px;
   padding-left: 138px;
-	text-align: center;
-	font-size: 21px;
-	line-height: 21px;
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
   color: #000000;
-	background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 
 .subclause-two p {
-	margin: 0;
-	margin-right: 69px;
-	margin-left: 69px;
-	margin-top: 21px;
+  margin: 0;
+  margin-right: 69px;
+  margin-left: 69px;
+  margin-top: 21px;
 }
 
 /*Поиск.Форма*/
 
 .search {
-	position: relative;
-	margin: 0;
-	padding: 0;
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .search-subtitle {
-	margin: 0;
-	padding: 0;
-	padding-top: 50px;
-	font-size: 30px;
-	line-height: 36px;
-	font-weight: bold;
-	color: #000000;
-	text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 50px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
 
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .search .text {
-	margin: 0;
-	padding: 0;
-	padding-top: 25px;
-	padding-bottom: 47px;
-	font-size: 14px;
-	line-height: 24px;
-	color: #333333;
-	text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  padding-bottom: 47px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+  text-align: center;
 
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
-
-
-.search-form {
-	outline: 1px solid skyblue;
-	width: 576px;
-	min-height: 397px;
-	position: absolute;
-	left: 312px;
-	top: 235px;
-  /* left 50%, transform:translateX - 50% */
-}
-
 
 .button-search {
-	display: inline-block;
-	box-sizing: border-box;
-	width: 568px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 568px;
   margin: 0;
   margin-left: 315px;
-	padding: 30px 100px;
-	font-size: 21px;
-	line-height: 26px;
-	color: #ffffff;
-	text-align: center;
-	background-color: #766357;
+  padding: 30px 100px;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #766357;
 }
 
 .button-search:hover {
-	background-color: #604e43;
+  background-color: #604e43;
 }
 
 .button-search:active {
-	color: rgba(255, 255, 255, 0.302);
-	background-color: #503e33;
+  color: rgba(255, 255, 255, 0.302);
+  background-color: #503e33;
 }
 
 .search-form {
-	position: absolute;
-	left: 50%;
-	top: 293px;
-	transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 293px;
+  transform: translateX(-50%);
   width: 458px;
   padding: 55px;
-	background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .search-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 0;
-	margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 30px;
   padding: 0;
-	font-size: 14px;
-	line-height: 26px;
-	color: #000000;
-	font-weight: bold;
-	background-color: #ffffff;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: bold;
+  background-color: #ffffff;
 }
 
 .search-line {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .search-line label {
@@ -528,24 +443,24 @@ figure {
 
 .calendar-check-in,
 .calendar-check-out {
-	position: absolute;
-	right: 64px;
+  position: absolute;
+  right: 64px;
 }
 
 .calendar-check-in {
-	top: 63px;
+  top: 63px;
 }
 
 .calendar-check-out {
-	top: 130px;
+  top: 130px;
 }
 
 .search-item a:hover path {
-	fill: #000000;
+  fill: #000000;
 }
 
 .search-item a:active path {
-	fill: #81b3d2;
+  fill: #81b3d2;
 }
 
 .search-item button {
@@ -584,112 +499,103 @@ figure {
 .button-plus:hover::before,
 .button-plus:hover::after,
 .button-minus:hover::after {
-	background-color: #000000;
+  background-color: #000000;
 }
 
 .button-plus:active::before,
 .button-plus:active::after,
 .button-minus:active::after {
-	background-color: #81b3d2;
+  background-color: #81b3d2;
 }
 
 .button-find {
-	box-sizing: border-box;
-	width: 458px;
+  box-sizing: border-box;
+  width: 458px;
   margin-top: 24px;
-	padding: 17px;
-	font-size: 21px;
-	line-height: 26px;
-	color: #ffffff;
-	vertical-align: middle;
-	text-align: center;
-	text-transform: uppercase;
-	background-color: #81b3d2;
-	border: none;
+  padding: 17px;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #81b3d2;
+  border: none;
 }
 
 .button-find:hover {
-	background-color: #669ec0;
+  background-color: #669ec0;
 }
 
 .button-find:active {
-	color: rgba(255, 255, 255, 0.302);
-	background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.302);
+  background-color: #5496bd;
 }
-
-/* в форме пока всё плохо. Если ты не знаешь как ее сделать - созвонимся. Календарик, согласно ТЗ - отдельный интерактивный элемемнт (ссылка) */
-
-/* что произошло с футером? */
 
 /*Гостиницы*/
 
 .catalog-list {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog-list .catalog-hotel:first-child {
-	border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
 
 .catalog-hotel {
-	display: flex;
-
-	padding-top: 25px;
-	padding-bottom: 29px;
-	padding-right: 71px;
-	padding-left: 71px;
-	border-bottom: 1px solid #e5e5e5;
-
-	margin: 31px 73px;
-  /* Отступы - внутренние */
-
+  display: flex;
+  padding-top: 25px;
+  padding-bottom: 29px;
+  padding-right: 71px;
+  padding-left: 71px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-hotel figure {
   height: 91px;
-	margin: 0;
+  margin: 0;
   margin-right: 30px;
-	padding: 0;
-	padding-top: 5px;
+  padding: 0;
+  padding-top: 5px;
 }
 
 .hotels-info h3 {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .hotels-info a {
-	font-size: 21px;
-	line-height: 26px;
-	font-weight: bold;
-	color: #000000;
-	background-color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .hotels-info a:hover {
-	color: #81b3d2;
+  color: #81b3d2;
 }
 
 .hotels-info a:active {
-	color: rgba(0, 0, 0, 0.302);
+  color: rgba(0, 0, 0, 0.302);
 }
 
 .hotels-info-column {
-	display: flex;
-	justify-content: space-between;
-	width: 259px;
-	padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  width: 259px;
+  padding-top: 8px;
 }
 
 .hotels-column-left {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotels-column-left a {
@@ -711,116 +617,116 @@ figure {
 }
 
 .hotels-column-right {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotels-column-right a {
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: bold;
-	color: #ffffff;
-	background-color: #766357;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #766357;
 }
 
 .hotels-column-right a:hover {
-	color: #ffffff;
-	background-color: #604e43;
+  color: #ffffff;
+  background-color: #604e43;
 }
 
 .hotels-column-right a:active {
-	color: rgba(255, 255, 255, 0.302);
-	background-color: #503e33;
+  color: rgba(255, 255, 255, 0.302);
+  background-color: #503e33;
 }
 
 .button-more {
-	box-sizing: border-box;
-	width: 111px;
+  box-sizing: border-box;
+  width: 111px;
   margin-top: 13px;
-	padding: 3px 15px;
-	vertical-align: middle;
-	text-align: center;
-	text-transform: uppercase;
-	background-color: #81b3d2;
-	border: none;
+  padding: 3px 15px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #81b3d2;
+  border: none;
 }
 
 .hotels-button {
-	box-sizing: border-box;
-	width: 142px;
+  box-sizing: border-box;
+  width: 142px;
   margin-top: 13px;
-	padding: 3px 15px;
-	vertical-align: middle;
-	text-align: center;
-	text-transform: uppercase;
-	background-color: #766357;
-	border: none;
+  padding: 3px 15px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #766357;
+  border: none;
 }
 
 .hotels-rating {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-end;
-	margin-left: auto;
-	padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-left: auto;
+  padding-top: 5px;
 }
 
 .hotels-stars {
-	display: flex;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .hotels-stars img {
-	margin-left: 6px;
+  margin-left: 6px;
 }
 
 .rating {
-	box-sizing: border-box;
-	padding: 3px 12px;
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: normal;
-	text-align: center;
-	color: #666666;
-	background-color: #f2f2f2;
+  box-sizing: border-box;
+  padding: 3px 12px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: center;
+  color: #666666;
+  background-color: #f2f2f2;
 }
 
 /*Футер*/
 
 .main-footer {
-	position: absolute;
-	width: 1200px;
-	background-color: #ffffff;
-	opacity: 0.902;
-	box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0.2);
+  position: absolute;
+  width: 1200px;
+  background-color: #ffffff;
+  opacity: 0.902;
+  box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0.2);
 }
 
 .footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 37px;
-	padding-bottom: 50px;
-	padding-right: 71px;
-	padding-left: 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 37px;
+  padding-bottom: 50px;
+  padding-right: 71px;
+  padding-left: 71px;
 }
 
 .main-footer p {
-	margin: 0;
+  margin: 0;
 }
 
 .hashtag {
   width: 240px;
-	margin: 0;
-	text-align: center;
-	font-size: 21px;
-	line-height: 26px;
-	font-weight: bold;
-	color: #000000;
-	text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .footer-social {
@@ -828,72 +734,72 @@ figure {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 150px;
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .footer-social .social-button {
-	display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-	width: 46px;
-	height: 48px;
-	background-color: #81b3d2;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
 }
 
 .social-button:hover {
-	background-color: #669ec0;
+  background-color: #669ec0;
 }
 
 .social-button:active {
-	background-color: #5496bd;
+  background-color: #5496bd;
 }
 
 .social-button:active path {
-	fill: rgba(255, 255, 255, 0.302);
+  fill: rgba(255, 255, 255, 0.302);
 }
 
 .footer-copyright {
   display: flex;
   justify-content: space-around;
   align-items: center;
-	margin: 0;
-	width: 241px;
-	text-align: center;
+  margin: 0;
+  width: 241px;
+  text-align: center;
 }
 
 .website {
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: normal;
-	color: #000000;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: normal;
+  color: #000000;
 }
 
 .footer-copyright a:hover path {
-	fill: #81b3d2;
+  fill: #81b3d2;
 }
 
 .footer-copyright a:active path {
-	fill: rgba(0, 0, 0, 0.302);
+  fill: rgba(0, 0, 0, 0.302);
 }
 
 .visually-hidden:not(:focus):not(:active) {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .map {
-	width: 1200px;
-	height: 475px;
+  width: 1200px;
+  height: 475px;
 }
 
 .map p {
@@ -901,5 +807,5 @@ figure {
 }
 
 .filters {
-	height: 304px;
+  height: 304px;
 }
