@@ -16,17 +16,16 @@ a {
 	text-decoration: none;
 }
 
-figure {
-	margin: 0;
-	padding: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.background-white {
-	position: relative;
-    width: 1200px;
-    min-height: 933px;
-    margin-right: auto;
-    margin-left: auto;
+.layout-positioner {
+  position: relative;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 	background-color: #ffffff;
 	box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
 }
@@ -37,75 +36,41 @@ figure {
 }
 
 .site-navigation {
-	outline: 1px solid green;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
 	margin: 0;
 	padding: 15px 71px;
 	list-style: none;
 }
 
 .site-navigation li {
-	outline: 1px solid blue;
+	box-sizing: border-box;
+  width: 20%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	width: 128px;
 }
 
 .site-navigation li:nth-child(3) {
 	margin-left: auto;
+	padding-right: 31px;
 }
 
 .site-navigation li:nth-child(n+3) {
 	text-align: right;
 }
 
-.site-navigation li:nth-child(2n) {
-	margin-left: 115px;
-}
-
-.site-navigation a {
-	
-	color: #000000;
-	font-size: 14px;
-	line-height: 26px;
-	font-weight: bold;
-	background-color: #ffffff;
-}
-/*.site-navigation {
-	outline: 1px solid green;
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	margin: 0;
-	padding: 0 73px;
-	list-style: none;
-}
-
-.site-navigation li {
-	width: 20%;
-}
-
-.site-navigation li:nth-child(4) {
-	text-align: right;
-}
-
 .site-navigation li:nth-child(2) {
-	margin-right: auto;
+	padding-left: 28px;
 }
 
 .site-navigation a {
-	outline: 1px solid blue;
-	color: #000000;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
+  color: #000000;
 	background-color: #ffffff;
-	display: block;
-	padding: 15px 0;
-}*/
+}
 
 .site-navigation a:hover {
 	color: #81b3d2;
@@ -120,41 +85,47 @@ figure {
 .site-navigation-current a:active {
 	color: #766357;
 }
+
 /*Велком тайтл*/
+
 .welcome-title {
-	/*outline: 1px solid black;*/
 	height: 510px;
 	background-image: url("../img/backgroundphoto.jpg");
 	background-position: 0 -56px;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
+
+.welcome-title img {
+  position: absolute;
+  top: 132px;
+  left: 370px;
+}
+
 .welcome-title::before {
 	content: "";
 	position: absolute;
 	top: 509px;
-    left: 0;
-    width: 1200px;
-    height: 59px;
+  left: 0;
+  width: 1200px;
+  height: 59px;
 	background-image: url("../img/svg-sedona/intro-mask.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
-.welcome-title img {
-	position: absolute;
-	top: 132px;
-	left: 370px;
+.slogan p {
+	margin: 0;
 }
 
 .slogan {
-	margin: 0;
+	padding-top: 60px;
+	padding-bottom: 51px;
 }
 
-.slogan-text {
-	display: block;
-	padding-top: 59px;
-	padding-bottom: 30px;
-	margin: 0;
+.slogan .slogan-text {
+	max-width: 440px;
+	margin-bottom: 30px;
+	margin-left: 380px;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
@@ -165,18 +136,19 @@ figure {
 }
 
 .subslogan {
-	padding-bottom: 50px;
-	margin: 0;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
 	color: #333333;
 	text-align: center;
-
 	background-color: #ffffff;
 }
 
 /*Преимущества*/
+.features {
+	margin: 0;
+	padding: 0;
+}
 
 .features-list {
 	display: flex;
@@ -191,83 +163,64 @@ figure {
 }
 
 .feature-info {
+  box-sizing: border-box;
 	width: 400px;
-	
-	color: #ffffff;
+	padding-top: 48px;
+	padding-bottom: 54px;
 	text-align: center;
-
+  color: #ffffff;
 	background-color: #81b3d2;
 }
 
 .feature-info h3 {
-	margin: 0;
-	margin-bottom: 23px;
-	margin-top: 50px;
-	padding-left: 120px;
-	padding-right: 120px;
-	/*padding: 0 60px;*/
-	color: #ffffff;
+	max-width: 151px;
+  margin: 0;
+	margin-bottom: 25px;
+	padding-left: 124px;
+	padding-right: 118px;
 	text-align: center;
 	font-size: 21px;
 	line-height: 21px;
+  color: #ffffff;
 	background-color: #81b3d2;
 }
 
 .feature-info p {
 	margin: 0;
+	margin-top: 22px;
 	margin-right: 47px;
 	margin-left: 47px;
-	margin-top: 21px;
 }
+
+.feature-item figure {
+  width: 800px;
+  height: 256px;
+	margin: 0;
+	padding: 0;
+	background-repeat: no-repeat;
+}
+
 .city {
 	background-image: url("../img/city.jpg");
-	background-repeat: no-repeat;
-	width: 800px;
-	height: 256px;	
 }
 
 .devilbridge {
 	background-image: url("../img/devilbridge.jpg");
-	background-repeat: no-repeat;
-	width: 800px;
-	height: 256px;
 }
 
 .sublist-one {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
 .sublist-one li {
 	width: 400px;
-	min-height: 331px;
+	padding-bottom: 82px;
 	vertical-align: middle;
 	text-align: center;
 	text-transform: uppercase;
-
-} 
-
-.sublist-two {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
-	background-color: #eeeeee;
-}
-
-.sublist-two li {
-	width: 400px;
-	min-height: 257px;
-	text-align: center;
-}
-
-.subclause {
-	outline: 1px solid grey;
 }
 
 .subclause,
@@ -276,15 +229,15 @@ figure {
 }
 
 .subclause h3 {
-	color: #000000;
-	text-align: center;
-	font-size: 21px;
-	line-height: 21px;
-	background-color: #ffffff;
+  position: relative;
 	margin: 0;
 	margin-bottom: 23px;
 	padding-top: 164px;
-	position: relative;
+	text-align: center;
+	font-size: 21px;
+	line-height: 21px;
+  color: #000000;
+	background-color: #ffffff;
 }
 
 .subclause p {
@@ -297,68 +250,84 @@ figure {
 	content: "";
 	position: absolute;
 	top: 60px;
-    left: 162px;
-    width: 75px;
-    height: 72px;
+  left: 162px;
+  width: 75px;
+  height: 72px;
 	background-image: url("../img/svg-sedona/icon-1.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
+
 .food::after {
 	content: "";
 	position: absolute;
 	top: 60px;
-    left: 162px;
-    width: 74px;
-    height: 70px;
+  left: 162px;
+  width: 74px;
+  height: 70px;
 	background-image: url("../img/svg-sedona/icon-3.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
+
 .souvenir::after {
 	content: "";
 	position: absolute;
 	top: 56px;
-    left: 168px;
-    width: 64px;
-    height: 76px;
+  left: 168px;
+  width: 64px;
+  height: 76px;
 	background-image: url("../img/svg-sedona/icon-2.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.sublist-two {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	list-style: none;
+	background-color: #eeeeee;
+}
+
+.sublist-two li {
+	width: 400px;
+	padding-top: 48px;
+	padding-bottom: 58px;
+	text-align: center;
 }
 
 .subclause-two h3 {
-	color: #000000;
+  margin: 0;
+  margin-bottom: 23px;
+  padding-right: 138px;
+  padding-left: 138px;
 	text-align: center;
 	font-size: 21px;
 	line-height: 21px;
+  color: #000000;
 	background-color: #eeeeee;
-	margin: 0;
-	margin-bottom: 23px;
-	margin-top: 49px;
-	padding-right: 138px;
-	padding-left: 138px;
 }
 
 .subclause-two p {
 	margin: 0;
 	margin-right: 69px;
 	margin-left: 69px;
-	margin-top: 22px;
+	margin-top: 21px;
 }
+
 /*Поиск.Форма*/
 
 .search {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
 .search-subtitle {
 	margin: 0;
 	padding: 0;
-	margin-top: 50px;
+	padding-top: 50px;
 	font-size: 30px;
 	line-height: 36px;
 	font-weight: bold;
@@ -372,7 +341,7 @@ figure {
 	margin: 0;
 	padding: 0;
 	padding-top: 25px;
-	margin-bottom: 50px;
+	padding-bottom: 47px;
 	font-size: 14px;
 	line-height: 24px;
 	color: #333333;
@@ -381,21 +350,17 @@ figure {
 	background-color: #ffffff;
 }
 
-.search-form {
-	outline: 1px solid skyblue;
-	width: 576px;
-	min-height: 397px;
-	position: absolute;
-	left: 312px;
-	top: 235px;
-}
-
 .button-search {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 568px;
+  margin: 0;
+  margin-left: 315px;
+	padding: 30px 100px;
 	font-size: 21px;
 	line-height: 26px;
 	color: #ffffff;
 	text-align: center;
-
 	background-color: #766357;
 }
 
@@ -405,61 +370,166 @@ figure {
 
 .button-search:active {
 	color: rgba(255, 255, 255, 0.302);
-
 	background-color: #503e33;
 }
 
-.button {
+.search-form {
+	position: absolute;
+	left: 50%;
+	top: 293px;
+	transform: translateX(-50%);
+  width: 458px;
+  padding: 55px;
+	background-color: #ffffff;
+}
+
+.search-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	margin-bottom: 30px;
+  padding: 0;
+	font-size: 14px;
+	line-height: 26px;
+	color: #000000;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+.search-line {
+	display: flex;
+	justify-content: space-between;
+}
+
+.search-line label {
+  margin-right: 41px;
+}
+
+.search-line .children {
+  margin-right: 27px;
+}
+
+.search-item input:not(:nth-child(3)):not(:nth-child(4)) {
+  box-sizing: border-box;
+  width: 346px;
+  margin: 0;
+  padding: 6px 12px;
+}
+
+.search-item input:nth-child(n+3) {
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.search-item input {
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.search-item input:hover {
+  background-color: #ebebeb;
+}
+
+.search-item input:focus {
+  outline: 2px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.calendar-check-in,
+.calendar-check-out {
+	position: absolute;
+	right: 64px;
+}
+
+.calendar-check-in {
+	top: 63px;
+}
+
+.calendar-check-out {
+	top: 130px;
+}
+
+.search-item a:hover path {
+	fill: #000000;
+}
+
+.search-item a:active path {
+	fill: #81b3d2;
+}
+
+.search-item button {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.button-minus::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  left: 13px;
+  background-color: #a9a9a9;
+}
+
+.button-plus::before,
+.button-plus::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 3px;
+  top: 18px;
+  left: 13px;
+  background-color: #a9a9a9;
+}
+
+.button-plus::before {
+  transform: rotate(90deg);
+}
+
+.button-plus:hover::before,
+.button-plus:hover::after,
+.button-minus:hover::after {
+	background-color: #000000;
+}
+
+.button-plus:active::before,
+.button-plus:active::after,
+.button-minus:active::after {
+	background-color: #81b3d2;
+}
+
+.button-find {
+	box-sizing: border-box;
+	width: 458px;
+  margin-top: 24px;
+	padding: 17px;
 	font-size: 21px;
 	line-height: 26px;
 	color: #ffffff;
 	vertical-align: middle;
 	text-align: center;
 	text-transform: uppercase;
-
 	background-color: #81b3d2;
 	border: none;
 }
 
-.button:hover {
+.button-find:hover {
 	background-color: #669ec0;
 }
 
-.button:active {
+.button-find:active {
 	color: rgba(255, 255, 255, 0.302);
 	background-color: #5496bd;
-}
-
-.search-item {
-	font-size: 14px;
-	line-height: 26px;
-	color: #000000;	
-	text-align: center;
-	font-weight: bold;
-
-	background-color: #ffffff;
-}
-
-.search-item input {
-	font: inherit;
-	text-transform: uppercase;
-
-	border: none;
-	background-color: #f2f2f2;
-}
-
-.search-item input:hover {
-	background-color: #ebebeb;
-}
-
-.search-item input:focus {
-	background-color: #ffffff;
-}
-
-.date {
-	background-image: url("../img/svg-sedona/calendar.svg");
-	background-repeat: no-repeat;
-	background-position: 97% 50%;
 }
 
 /*Гостиницы*/
@@ -470,21 +540,29 @@ figure {
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0;
-
 	padding: 0;
 	list-style: none;
 }
 
+.catalog-list .catalog-hotel:first-child {
+	border-top: 1px solid #e5e5e5;
+}
+
 .catalog-hotel {
 	display: flex;
-	margin: 31px 73px;
+	padding-top: 25px;
+	padding-bottom: 29px;
+	padding-right: 71px;
+	padding-left: 71px;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 .catalog-hotel figure {
+  height: 91px;
 	margin: 0;
+  margin-right: 30px;
 	padding: 0;
-	height: 90px;
-	margin-right: 30px;
+	padding-top: 5px;
 }
 
 .hotels-info h3 {
@@ -497,7 +575,6 @@ figure {
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
-
 	background-color: #ffffff;
 }
 
@@ -512,33 +589,36 @@ figure {
 .hotels-info-column {
 	display: flex;
 	justify-content: space-between;
+	width: 259px;
+	padding-top: 8px;
 }
+
 .hotels-column-left {
-	display: flex;
-	flex-direction: column;
-}
-.hotels-column-right {
 	display: flex;
 	flex-direction: column;
 }
 
 .hotels-column-left a {
-	font-size: 14px;
-	line-height: 21px;
-	font-weight: bold;
-	color: #ffffff;
-
-	background-color: #81b3d2;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #81b3d2;
 }
 
 .hotels-column-left a:hover {
-	color: #ffffff;
-	background-color: #669ec0;
+  color: #ffffff;
+  background-color: #669ec0;
 }
 
 .hotels-column-left a:active {
-	color: rgba(255, 255, 255, 0.302);
-	background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.302);
+  background-color: #5496bd;
+}
+
+.hotels-column-right {
+	display: flex;
+	flex-direction: column;
 }
 
 .hotels-column-right a {
@@ -546,7 +626,6 @@ figure {
 	line-height: 21px;
 	font-weight: bold;
 	color: #ffffff;
-
 	background-color: #766357;
 }
 
@@ -560,13 +639,37 @@ figure {
 	background-color: #503e33;
 }
 
+.button-more {
+	box-sizing: border-box;
+	width: 111px;
+  margin-top: 13px;
+	padding: 3px 15px;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #81b3d2;
+	border: none;
+}
+
+.hotels-button {
+	box-sizing: border-box;
+	width: 142px;
+  margin-top: 13px;
+	padding: 3px 15px;
+	vertical-align: middle;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #766357;
+	border: none;
+}
+
 .hotels-rating {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-left: auto;
-
+	padding-top: 5px;
 }
 
 .hotels-stars {
@@ -576,64 +679,93 @@ figure {
 	list-style: none;
 }
 
+.hotels-stars img {
+	margin-left: 6px;
+}
+
 .rating {
+	box-sizing: border-box;
+	padding: 3px 12px;
 	font-size: 14px;
 	line-height: 21px;
 	font-weight: normal;
+	text-align: center;
 	color: #666666;
-
 	background-color: #f2f2f2;
 }
 
 /*Футер*/
 
 .main-footer {
-	outline: 1px solid orange;
-	display: flex;
-	justify-content: space-around;
-	min-height: 120px;
-	padding: 30px 0;
+	position: absolute;
+	width: 1200px;
+	background-color: #ffffff;
+	opacity: 0.902;
+	box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0.2);
+}
 
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 37px;
+	padding-bottom: 50px;
+	padding-right: 71px;
+	padding-left: 71px;
+}
+
+.main-footer p {
+	margin: 0;
 }
 
 .hashtag {
-	outline: 1px solid pink;
+  width: 240px;
 	margin: 0;
-	min-height: 60px;
-	width: 240px;
 	text-align: center;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
 	text-transform: uppercase;
-
-	background-color: #ffffff;
 }
 
 .footer-social {
-	outline: 1px solid pink;
-	margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+	margin: 0 auto;
 	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	width: 240px;
-
-	min-height: 60px;
 	list-style: none;
-
-	background-color: #ffffff;
 }
 
-.footer-social a {
-	color: #000000;
+.footer-social .social-button {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	width: 46px;
+	height: 48px;
+	background-color: #81b3d2;
+}
+
+.social-button:hover {
+	background-color: #669ec0;
+}
+
+.social-button:active {
+	background-color: #5496bd;
+}
+
+.social-button:active path {
+	fill: rgba(255, 255, 255, 0.302);
 }
 
 .footer-copyright {
-	outline: 1px solid pink;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 	margin: 0;
-	min-height: 60px;
-	width: 240px;
+	width: 241px;
 	text-align: center;
 }
 
@@ -642,21 +774,14 @@ figure {
 	line-height: 26px;
 	font-weight: normal;
 	color: #000000;
-
-	background-color: #ffffff;
 }
 
-.footer-copyright a:hover {
-	color: #81b3d2;
+.footer-copyright a:hover path {
+	fill: #81b3d2;
 }
 
-.footer-copyright a:active {
-	color: rgba(0, 0, 0, 0.302);
-}
-
-.button-academy {
-	background-image: url("../img/svg-sedona/logo-htmlacademy.svg");
-	background-repeat: no-repeat;
+.footer-copyright a:active path {
+	fill: rgba(0, 0, 0, 0.302);
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -672,17 +797,15 @@ figure {
 	overflow: hidden;
 }
 
-.main-header {
-	outline: 1px solid red;
-}
-
 .map {
 	width: 1200px;
 	height: 475px;
 }
 
-.filters {
-	outline: 1px solid yellow;
-	height: 305px;
+.map p {
+  margin: 0;
 }
 
+.filters {
+	height: 304px;
+}
