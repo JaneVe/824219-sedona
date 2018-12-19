@@ -26,6 +26,23 @@ img {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
+
+/* нельзя сбрасывать глобально стили. Исключение - ссылки. так что эти стили напиши там, где нужно */
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+/* используй box-sizing:border-box */
+
+/*поменяй название класса :) */
+.background-white {
+	position: relative;
+    width: 1200px;
+    min-height: 933px;
+    margin-right: auto;
+    margin-left: auto;
+
 	background-color: #ffffff;
 	box-shadow: 0px 0px 15px 5px rgba(0, 1, 1, 0.2);
 }
@@ -38,6 +55,11 @@ img {
 .site-navigation {
 	display: flex;
 	flex-wrap: wrap;
+
+
+  /* по умолчанию и так row */
+	flex-direction: row;
+
 	margin: 0;
 	padding: 15px 71px;
 	list-style: none;
@@ -49,8 +71,13 @@ img {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	width: 128px;
+  /* я бы таки дал li width:20%; сейчас не очень с маргнами этими. тоесть вообще убрать маргины. Только третему автоматический влево оставить */
+
 }
 
+/* через чур усложнила */
 .site-navigation li:nth-child(3) {
 	margin-left: auto;
 	padding-right: 31px;
@@ -118,6 +145,7 @@ img {
 }
 
 .slogan {
+
 	padding-top: 60px;
 	padding-bottom: 51px;
 }
@@ -126,6 +154,20 @@ img {
 	max-width: 440px;
 	margin-bottom: 30px;
 	margin-left: 380px;
+
+  /* зачем ? */
+	margin: 0
+  /* я всегда в блоках верхний и нижний отступ даю именно блоку родителю, а не его детям. сейчас у тебя верхний паддинг у слоган-текст,
+    нижний - у сабслоган. дай их общему блоку, а расстояниие между этими блоками напиши в маргин нижний слоган-текст */
+}
+
+.slogan-text {
+  /* Зачем блок? он изначально блочный */
+	display: block;
+	padding-top: 59px;
+	padding-bottom: 30px;
+	margin: 0;
+
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
@@ -170,6 +212,7 @@ img {
 	text-align: center;
   color: #ffffff;
 	background-color: #81b3d2;
+  /* про паддинги и маргины так же история, что и выше */
 }
 
 .feature-info h3 {
@@ -192,6 +235,7 @@ img {
 	margin-left: 47px;
 }
 
+
 .feature-item figure {
   width: 800px;
   height: 256px;
@@ -199,6 +243,10 @@ img {
 	padding: 0;
 	background-repeat: no-repeat;
 }
+
+
+/* city i devilbridge дублируются свойства, подумай объеденить в общий класс, а вотдельный остаивть только фоновое изображение типо так
+.photo-feature .photo-city */
 
 .city {
 	background-image: url("../img/city.jpg");
@@ -221,6 +269,31 @@ img {
 	vertical-align: middle;
 	text-align: center;
 	text-transform: uppercase;
+
+
+  /* мин высота так себе вараинт. Используй нижний и верхний падинг для регулрировки выоста */
+}
+
+.sublist-two {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	background-color: #eeeeee;
+}
+
+.sublist-two li {
+	width: 400px;
+	min-height: 257px;
+	text-align: center;
+}
+
+.subclause {
+	outline: 1px solid grey;
+
+
 }
 
 .subclause,
@@ -349,6 +422,18 @@ img {
 
 	background-color: #ffffff;
 }
+
+
+.search-form {
+	outline: 1px solid skyblue;
+	width: 576px;
+	min-height: 397px;
+	position: absolute;
+	left: 312px;
+	top: 235px;
+  /* left 50%, transform:translateX - 50% */
+}
+
 
 .button-search {
 	display: inline-block;
@@ -532,6 +617,10 @@ img {
 	background-color: #5496bd;
 }
 
+/* в форме пока всё плохо. Если ты не знаешь как ее сделать - созвонимся. Календарик, согласно ТЗ - отдельный интерактивный элемемнт (ссылка) */
+
+/* что произошло с футером? */
+
 /*Гостиницы*/
 
 .catalog-list {
@@ -550,11 +639,16 @@ img {
 
 .catalog-hotel {
 	display: flex;
+
 	padding-top: 25px;
 	padding-bottom: 29px;
 	padding-right: 71px;
 	padding-left: 71px;
 	border-bottom: 1px solid #e5e5e5;
+
+	margin: 31px 73px;
+  /* Отступы - внутренние */
+
 }
 
 .catalog-hotel figure {
