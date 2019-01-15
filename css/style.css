@@ -128,20 +128,19 @@ img {
 
 .slogan .slogan-text {
   max-width: 440px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-left: 380px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
   text-align: center;
-
   background-color: #ffffff;
 }
 
 .subslogan {
   font-size: 14px;
-  line-height: 21px;
+  line-height: 26px;
   font-weight: normal;
   color: #333333;
   text-align: center;
@@ -184,7 +183,7 @@ img {
 .feature-info h3 {
   max-width: 151px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   padding-left: 124px;
   padding-right: 118px;
   text-align: center;
@@ -196,12 +195,13 @@ img {
 
 .feature-info p {
   margin: 0;
-  margin-top: 22px;
+  margin-top: 21px;
   margin-right: 47px;
   margin-left: 47px;
 }
 
-.feature-item figure {
+.city,
+.devilbridge {
   width: 800px;
   height: 256px;
   margin: 0;
@@ -231,7 +231,7 @@ img {
 
 .sublist-one li {
   width: 400px;
-  padding-bottom: 82px;
+  padding-bottom: 80px;
   vertical-align: middle;
   text-align: center;
   text-transform: uppercase;
@@ -246,7 +246,7 @@ img {
   position: relative;
   margin: 0;
   margin-bottom: 23px;
-  padding-top: 164px;
+  padding-top: 163px;
   text-align: center;
   font-size: 21px;
   line-height: 21px;
@@ -316,7 +316,7 @@ img {
 
 .subclause-two h3 {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   padding-right: 138px;
   padding-left: 138px;
   text-align: center;
@@ -333,6 +333,12 @@ img {
   margin-top: 21px;
 }
 
+.subclause-two .text-line {
+  margin: 0;
+  margin-right: 73px;
+  margin-left: 73px;
+  margin-top: 21px;
+}
 .search {
   position: relative;
   margin: 0;
@@ -348,7 +354,6 @@ img {
   font-weight: bold;
   color: #000000;
   text-align: center;
-
   background-color: #ffffff;
 }
 
@@ -361,7 +366,6 @@ img {
   line-height: 24px;
   color: #333333;
   text-align: center;
-
   background-color: #ffffff;
 }
 
@@ -376,9 +380,13 @@ img {
   padding: 30px 100px;
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
   color: #ffffff;
+  text-transform: uppercase;
   text-align: center;
   background-color: #766357;
+  border: none;
+  cursor: pointer;
 }
 
 .button-search:hover {
@@ -391,20 +399,15 @@ img {
 }
 
 .search-form {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 3;
   left: 316px;
   top: 291px;
   width: 458px;
+  min-height: 286px;
   padding: 55px;
   background-color: #ffffff;
-}
-
-.form-show {
-  display: block;
-  -webkit-animation: bounce 0.5s;
-          animation: bounce 0.5s;
 }
 
 .form-error {
@@ -453,6 +456,7 @@ input[name="date-check-in"],
 input[name="date-check-out"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 38px;
   width: 346px;
   margin: 0;
   padding-top: 6px;
@@ -490,6 +494,12 @@ input[name="date-check-out"] {
 .calendar-check-out {
   position: absolute;
   right: 64px;
+  border: none;
+  padding: 0;
+  width: 21px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
 }
 
 .calendar-check-in {
@@ -510,7 +520,8 @@ input[name="date-check-out"] {
   fill: #81b3d2;
 }
 
-.search-item button {
+.button-minus,
+.button-plus {
   position: relative;
   width: 38px;
   height: 38px;
@@ -565,6 +576,7 @@ input[name="date-check-out"] {
   padding: 17px;
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
   color: #ffffff;
   vertical-align: middle;
   text-align: center;
@@ -580,34 +592,6 @@ input[name="date-check-out"] {
 .button-find:active {
   color: rgba(255, 255, 255, 0.302);
   background-color: #5496bd;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-    padding-top: 10px;
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    padding-top: 55px;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-    padding-top: 10px;
-  }
-
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    padding-top: 55px;
-  }
 }
 
 @-webkit-keyframes shake {
@@ -682,6 +666,7 @@ input[name="date-check-out"] {
 .filters-form fieldset {
   margin: 0;
   margin-bottom: 30px;
+  margin-right: 2px;
   padding: 0;
   border: none;
 }
@@ -708,10 +693,6 @@ input[name="date-check-out"] {
   list-style: none;
 }
 
-.filter-input-checkbox {
-  display: none;
-}
-
 .filter-checkbox label {
   display: block;
   position: relative;
@@ -720,9 +701,10 @@ input[name="date-check-out"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  padding-left: 2px;
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: 0;
@@ -734,7 +716,16 @@ input[name="date-check-out"] {
   background-position: 0 0;
 }
 
-.filter-input-checkbox + label::after {
+.filter-input-checkbox:checked:disabled + label::after {
+  background-image: url("../img/svg-sedona/checkbox-on-dis.svg");
+}
+
+.filter-input-checkbox:focus + label::before {
+  border: 2px solid #a7c8fe;
+  border-radius: 4px;
+
+}
+.filter-input-checkbox + label::before {
   content: "";
   position: absolute;
   left: -38px;
@@ -746,6 +737,10 @@ input[name="date-check-out"] {
   background-position: 0 0;
 }
 
+.filter-input-checkbox:disabled + label::before {
+  background-image: url("../img/svg-sedona/checkbox-off-dis.svg");
+}
+
 .filter-range {
   width: 327px;
   margin-left: auto;
@@ -754,7 +749,7 @@ input[name="date-check-out"] {
 .filter-range h3 {
   margin: 0;
   margin-bottom: 9px;
-  padding-left: 7px;
+  padding-left: 10px;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -762,9 +757,9 @@ input[name="date-check-out"] {
 
 .price-controls {
   position: relative;
-  height: 32px;
   margin-bottom: 20px;
   margin-left: 7px;
+  padding-top: 5px;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -786,8 +781,7 @@ input[name="date-check-out"] {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 32px;
-  vertical-align: top;
+  line-height: 21px;
   cursor: pointer;
 }
 
@@ -803,7 +797,9 @@ input[name="date-check-out"] {
 
 .price-controls input {
   width: 50px;
+  min-height: 25px;
   margin: 0;
+  padding: 0;
   color: inherit;
   font: inherit;
   background: none;
@@ -841,7 +837,7 @@ input[name="date-check-out"] {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  border-width: 10px;
 }
 
 .range-toggle-min {
@@ -855,9 +851,9 @@ input[name="date-check-out"] {
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 34px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
   background: transparent;
@@ -908,6 +904,7 @@ input[name="date-check-out"] {
 
 .sorting p {
   margin: 0;
+  margin-right: 6px;
 }
 
 .sorting-species-list {
@@ -1008,7 +1005,7 @@ input[name="date-check-out"] {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.catalog-hotel figure {
+.hotels-photo {
   height: 91px;
   margin: 0;
   margin-right: 30px;
@@ -1016,6 +1013,16 @@ input[name="date-check-out"] {
   padding-top: 5px;
 }
 
+.hotels-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 700px;
+}
 .hotels-info h3 {
   margin: 0;
   padding: 0;
@@ -1138,9 +1145,6 @@ input[name="date-check-out"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -1152,8 +1156,11 @@ input[name="date-check-out"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-bottom: 47px;
   list-style: none;
 }
 
@@ -1168,7 +1175,7 @@ input[name="date-check-out"] {
 .rating {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 3px 12px;
+  padding: 3px 14px;
   font-size: 14px;
   line-height: 21px;
   font-weight: normal;
@@ -1185,6 +1192,13 @@ input[name="date-check-out"] {
   opacity: 0.902;
   -webkit-box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0.2);
           box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0.2);
+}
+
+.layout-positioner .footer-hotel {
+  position: static;
+  opacity: 1;
+  -webkit-box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0);
+          box-shadow: 0px 12px 15px 5px rgba(0, 1, 1, 0);
 }
 
 .footer {
@@ -1277,11 +1291,16 @@ input[name="date-check-out"] {
 }
 
 .website {
-  padding-left: 5px;
+  padding-left: 8px;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
   color: #000000;
+}
+
+.button-academy svg {
+  margin-right: 23px;
+  margin-top: 3px;
 }
 
 .button-academy:hover path {
@@ -1292,7 +1311,8 @@ input[name="date-check-out"] {
   fill: rgba(0, 0, 0, 0.302);
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1323,6 +1343,5 @@ input[name="date-check-out"] {
 .map iframe {
   position: relative;
   z-index: 2;
-
   border: none;
 }
