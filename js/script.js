@@ -16,7 +16,7 @@ catch (err) {
 
 buttonsearch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  form.classList.toggle("form-show");
+  form.classList.toggle("form-close");
   if (storage) {
     datecheckin.value = storage;
     datecheckout.focus();
